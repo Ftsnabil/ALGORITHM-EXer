@@ -1,0 +1,19 @@
+ALGORITHM EXer
+    tab : ARRAY_OF INTEGER []
+    key,x,y:INTEGER
+BEGIN
+    FOR x FROM 1 TO 10  DO
+        READ(key)
+        inserted:=false
+        y:=tab.length
+        WHILE(x>0 AND inserted=false)
+            IF (tab[y-1]>key ) THEN
+                tab[y+1]=tab[y]
+                y:=y-1
+            ELSE
+                inserted:=true
+            END_IF
+        END_WHILE
+    tab[y]=key
+    END_FOR
+END
